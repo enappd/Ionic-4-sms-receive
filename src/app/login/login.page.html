@@ -1,0 +1,122 @@
+<!-- /**
+* Ionic Firebase Full Auth App  (https://store.enappd.com/product/firebase-starter-full-auth/)
+*
+* Copyright © 2019-present Enappd. All rights reserved.
+*
+* This source code is licensed as per the terms found in the
+* LICENSE.md file in the root directory of this source tree.
+*/  -->
+
+
+<ion-content no-padding>
+  <div class="main">
+    <ion-card no-margin>
+      <ion-card-content>
+        <ion-row class="row">
+          <div class="fire-logo">
+            <img src="assets/logo.png" class="img-logo">
+            <ion-text padding>
+              <h2 no-margin margin-vertical text-center>Welcome to Ionic 4 Receive SMS</h2>
+            </ion-text>
+          </div>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input clearInput type="email" placeholder="Email" [(ngModel)]="email" class="input" padding-horizontal
+              clear-input="true"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input clearInput type="password" placeholder="Password" [(ngModel)]="password" class="input"
+              padding-horizontal clear-input="true"></ion-input>
+          </ion-col>
+        </ion-row>
+        <!-- <ion-row *ngIf="showOTPInput">
+          <ion-col>
+            <ion-input clearInput type="tel" [(ngModel)]="OTP" maxlength="6" class="otpinput" padding-horizontal>
+            </ion-input>
+          </ion-col>
+        </ion-row> -->
+        <ion-row *ngIf="showOTPInput" class="OTP-border">
+          <ion-col>
+            <div>
+              <ion-input name="1" readonly type="tel" [(ngModel)]="OTP[0]" maxlength="6" class="otpinput"
+                padding-horizontal>
+              </ion-input>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-input name="2" readonly type="tel" [(ngModel)]="OTP[1]" maxlength="6" class="otpinput"
+                padding-horizontal>
+              </ion-input>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-input name="3" readonly type="tel" [(ngModel)]="OTP[2]" maxlength="6" class="otpinput"
+                padding-horizontal>
+              </ion-input>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-input name="4" readonly type="tel" [(ngModel)]="OTP[3]" maxlength="6" class="otpinput"
+                padding-horizontal>
+              </ion-input>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-input name="5" readonly type="tel" [(ngModel)]="OTP[4]" maxlength="6" class="otpinput"
+                padding-horizontal>
+              </ion-input>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-input name="6" readonly type="tel" [(ngModel)]="OTP[5]" maxlength="6" class="otpinput"
+                padding-horizontal>
+              </ion-input>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="showOTPInput">
+          <ion-col>
+            <ion-text class="small">{{OTPmessage}}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button *ngIf="!showOTPInput" expand="block" (click)="next()" color="undefined" class="transition">
+              <strong class="white">
+                Next</strong></ion-button>
+            <ion-button *ngIf="showOTPInput" expand="block" (click)="register()" color="undefined" class="transition">
+              <strong class="white">
+                Register</strong></ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-text text-center class="block">Already have an account ?
+              <span class="bold">Login here</span></ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text text-center class="block bold">Forgot Password</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title text-center>
+      Made by Enappd
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
